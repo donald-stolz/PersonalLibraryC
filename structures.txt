@@ -1,0 +1,79 @@
+
+Example of a basic structure which holds 2 ints 't_point'.x and 't_point'.y
+
+	typedef	struct	s_point
+	{
+		int x;
+		int y;
+	}				t_point;
+	
+	Creates struct s_point. Defines "t_point" as structure s_point.
+		
+	Basic Template:
+		"	typedef struct 'structure name	"
+				{
+					'variable type' 'name'
+		"		}	'type name'; 			"
+	Basic C Code Syntax:
+		"	void	function()				"
+			{
+				t_point	*new;
+
+				new.x = 5;	or new->x = 5;
+				new.y = 5;	or new->y = 5;
+		"	}								"
+
+
+
+Example of a basic chained list (node). Holds variable type void 'data' and points to the next linked 't_list'.
+
+	typedef	struct	s_list
+	{
+		struct s_list	*next;
+		void			*data;
+	}				t_list;
+
+	Creates structure s_list. Defines "t_list" as structure s_list.
+
+	Basic Template:
+		"	typedef struct 'list type'		"
+			{
+				struct 'list type'	*next;
+				'variable type'		*data
+		"	}	'define name'			"
+	Basic C Code Syntax:
+		"	void	function()				"
+			{
+				t_list	*list1;
+				t_list	*list2;
+
+				list1->data = 123;
+				list1->next = list2;
+
+				list2->data = 56;
+				list2->next = NULL;
+		"	}								"
+
+
+
+Example of a binary tree. Holds variable type void 'data'. Points back to parent tree, left root, and right root.
+
+	typedef struct 		s_btree
+	{
+		struct  s_btree		*parent;
+		struct  s_btree		*right;
+		struct  s_btree		*left;
+		void				data;
+	}					t_btree;
+
+	Creates structure s_btree. Defines 't_btree' as structure s_btree.
+
+	Basic Template:
+		"	typedef	struct	'tree type'		"
+			{
+				struct 'tree type'		*'parent'
+				struct 'tree type'		*'root 1'
+				struct 'tree type'		*'root 2'
+		"	}	'define name';				"
+
+
